@@ -1,72 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     // Navigation handling
+    const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.sidebar-section li');
-    const activityIcons = document.querySelectorAll('.activity-icon');
-    const tabs = document.querySelectorAll('.tab');
 
-    // Function to show a section
-    function showSection(sectionId) {
-        sections.forEach(section => {
-            section.classList.remove('active');
-            if (section.id === sectionId) {
-                section.classList.add('active');
-            }
-        });
-    }
-
-    // Function to update active states
-    function updateActiveStates(element, elements) {
-        elements.forEach(el => el.classList.remove('active'));
-        element.classList.add('active');
-    }
-
-    // Sidebar navigation
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const sectionId = item.textContent.toLowerCase();
-            showSection(sectionId);
-            updateActiveStates(item, navItems);
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            
+            link.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
         });
     });
 
-    // Activity bar icons
-    activityIcons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            const sectionId = icon.getAttribute('title').toLowerCase();
-            showSection(sectionId);
-            updateActiveStates(icon, activityIcons);
+    // Tab switching
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Update buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Update content
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+            document.getElementById(targetTab).classList.add('active');
         });
     });
 
-    // Tab navigation
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const sectionId = tab.textContent.toLowerCase();
-            showSection(sectionId);
-            updateActiveStates(tab, tabs);
-        });
-    });
-
-    // Terminal typing animation
-    const terminalTexts = document.querySelectorAll('.typing-text');
-    terminalTexts.forEach(text => {
-        const content = text.textContent;
-        text.textContent = '';
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < content.length) {
-                text.textContent += content.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-        
-        setTimeout(typeWriter, 500);
-    });
-
-    // Smooth scrolling for navigation
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -78,4 +46,62 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-}); 
+
+    // Typing animation
+    const text = "hi rudy here :wave:";
+    const finalText = "hi rudy here 👋";
+    const typingText = document.querySelector('.typing-text');
+    let currentText = "";
+    let isDeleting = false;
+    let isMistake = false;
+    let isCorrecting = false;
+    let isEntering = false;
+
+    function type() {
+        if (!isDeleting && !isMistake && !isCorrecting && !isEntering) {
+            // Normal typing
+            if (currentText.length < 14) {
+                currentText = text.substring(0, currentText.length + 1);
+                typingText.textContent = currentText;
+                setTimeout(type, 100);
+            } else {
+                // Start mistake
+                isMistake = true;
+                currentText += ":wav";
+                typingText.textContent = currentText;
+                setTimeout(type, 1000);
+            }
+        } else if (isMistake) {
+            // Start deleting mistake
+            isMistake = false;
+            isDeleting = true;
+            setTimeout(type, 500);
+        } else if (isDeleting) {
+            // Delete mistake
+            if (currentText.length > 14) {
+                currentText = currentText.substring(0, currentText.length - 1);
+                typingText.textContent = currentText;
+                setTimeout(type, 50);
+            } else {
+                isDeleting = false;
+                isCorrecting = true;
+                setTimeout(type, 500);
+            }
+        } else if (isCorrecting) {
+            // Type correct emoji text
+            currentText = text;
+            typingText.textContent = currentText;
+            isCorrecting = false;
+            isEntering = true;
+            setTimeout(type, 1000);
+        } else if (isEntering) {
+            // Simulate enter key and show actual emoji
+            currentText = finalText;
+            typingText.textContent = currentText;
+            isEntering = false;
+        }
+    }
+
+    // Start typing animation
+    setTimeout(type, 1000);
+});

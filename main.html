@@ -3,136 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Cybersecurity Student</title>
+    <title>Rudy | Cybersecurity Student</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="vscode-container">
-        <!-- Activity Bar (Left Sidebar) -->
-        <div class="activity-bar">
-            <div class="activity-icon active" title="Home">
-                <i class="fas fa-home"></i>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="#home" class="active">home</a>
+                <a href="#projects">projects</a>
+                <a href="#contact">contact</a>
             </div>
-            <div class="activity-icon" title="About">
-                <i class="fas fa-user"></i>
-            </div>
-            <div class="activity-icon" title="Projects">
-                <i class="fas fa-code"></i>
-            </div>
-            <div class="activity-icon" title="Education">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="activity-icon" title="Skills">
-                <i class="fas fa-tools"></i>
-            </div>
-            <div class="activity-icon" title="Contact">
-                <i class="fas fa-envelope"></i>
-            </div>
-        </div>
+        </nav>
 
-        <!-- Main Content Area -->
-        <div class="main-content">
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <div class="sidebar-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li class="active">Home</li>
-                        <li>About</li>
-                        <li>Projects</li>
-                        <li>Education</li>
-                        <li>Skills</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Content Area -->
-            <div class="content">
-                <div class="tab-bar">
-                    <div class="tab active">Home</div>
-                    <div class="tab">About</div>
-                    <div class="tab">Projects</div>
+        <!-- Main Content -->
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="active">
+                <div class="hero">
+                    <img src="pfp.jpg" alt="Profile Picture" class="profile-image">
+                    <h1 class="typing-text"></h1>
+                    <p class="subtitle">20 y/o Cybersecurity student at RMIT. Into coding and breaking stuff (ethically).</p>
+                    <div class="social-links">
+                        <a href="https://github.com/s4106882" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="editor-content">
-                    <section id="home" class="active">
-                        <h1>Welcome to My Portfolio</h1>
-                        <div class="terminal">
-                            <div class="terminal-header">
-                                <span class="terminal-title">Terminal</span>
-                            </div>
-                            <div class="terminal-content">
-                                <p class="typing-text">$ Hello, I'm [Your Name]</p>
-                                <p class="typing-text">$ Cybersecurity Student at RMIT</p>
-                                <p class="typing-text">$ Passionate about Security & Technology</p>
-                            </div>
-                        </div>
-                    </section>
+                <div class="about">
+                    <h2>about me</h2>
+                    <p>I'm a cybersecurity student at RMIT. I got into the field after a data breach locked me out of my email, Discord, and Steam accounts. I managed to recover them, but the experience made me realise how vulnerable digital systems can be. Since then, I've been focused on learning how these breaches happen and how to prevent them.</p>
+                </div>
 
-                    <section id="about">
-                        <h2>About Me</h2>
-                        <p>I am a dedicated cybersecurity student at RMIT University, passionate about protecting digital assets and understanding security vulnerabilities. My journey in cybersecurity is driven by a curiosity about how systems work and how to make them more secure.</p>
-                    </section>
-
-                    <section id="projects">
-                        <h2>Projects</h2>
-                        <div class="project-grid">
-                            <div class="project-card">
-                                <h3>Project 1</h3>
-                                <p>Description of your first project</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Security</span>
+                <div class="work-edu">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="work">work</button>
+                        <button class="tab-btn" data-tab="education">education</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div id="work" class="tab-pane active">
+                            <div class="experience-box">
+                                <div class="experience-item">
+                                    <img src="404.jpg" alt="404" class="experience-icon">
+                                    <div class="experience-content">
+                                        <h4>No work experience yet</h4>
+                                        <p>Why are you still reading this there's nothing to see here...</p>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Add more project cards as needed -->
                         </div>
-                    </section>
-
-                    <section id="education">
-                        <h2>Education</h2>
-                        <div class="education-item">
-                            <h3>RMIT University</h3>
-                            <p>Bachelor of Cybersecurity</p>
-                            <p>Current Student</p>
-                        </div>
-                    </section>
-
-                    <section id="skills">
-                        <h2>Technical Skills</h2>
-                        <div class="skills-container">
-                            <div class="skill-category">
-                                <h3>Security Tools</h3>
-                                <ul>
-                                    <li>Wireshark</li>
-                                    <li>Nmap</li>
-                                    <li>Metasploit</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h3>Programming</h3>
-                                <ul>
-                                    <li>Python</li>
-                                    <li>Bash</li>
-                                    <li>SQL</li>
-                                </ul>
+                        
+                        <div id="education" class="tab-pane">
+                            <div class="experience-box">
+                                <div class="experience-item">
+                                    <img src="rmit-logo.jpg" alt="RMIT" class="experience-icon">
+                                    <div class="experience-content">
+                                        <h4>RMIT University</h4>
+                                        <p>Bachelor of Cybersecurity</p>
+                                        <p class="experience-date">Current Student</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </section>
-
-                    <section id="contact">
-                        <h2>Contact</h2>
-                        <div class="contact-info">
-                            <p><i class="fas fa-envelope"></i> your.email@example.com</p>
-                            <p><i class="fab fa-github"></i> github.com/yourusername</p>
-                            <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourusername</p>
-                        </div>
-                    </section>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+                <div class="projects">
+                    <div class="projects-header">
+                        <h2>featured projects</h2>
+                        <a href="#projects" class="view-more-link">view all projects <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>Movie Streaming Application</h3>
+                                <p>A Python-based tool for scraping and streaming movies.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Selenium</span>
+                                    <span class="tech-tag">PyQt5</span>
+                                    <span class="tech-tag">APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>all projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Movie Streaming Application</h3>
+                            <p>A Python-based tool for scraping and streaming movies.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">PyQt5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards here -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>get in touch</h2>
+                <div class="contact-content">
+                    <p>Feel free to reach out if you'd like to connect or discuss potential opportunities.</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-button">
+                            <i class="fas fa-envelope"></i>
+                            Email Me
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" class="contact-button">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Rudy | Built with ❤️</p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
