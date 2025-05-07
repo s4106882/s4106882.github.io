@@ -34,6 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle view all projects link
+    const viewAllProjectsLink = document.querySelector('.view-more-link');
+    if (viewAllProjectsLink) {
+        viewAllProjectsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = viewAllProjectsLink.getAttribute('href').substring(1);
+            
+            // Update navigation
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector(`a[href="#${targetId}"]`).classList.add('active');
+            
+            // Update sections
+            sections.forEach(s => s.classList.remove('active'));
+            document.getElementById(targetId).classList.add('active');
+        });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

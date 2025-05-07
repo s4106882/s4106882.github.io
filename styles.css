@@ -31,7 +31,7 @@ body {
 
 /* Navigation */
 .nav {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .nav-links {
@@ -56,7 +56,7 @@ body {
 
 /* Main Content */
 main {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 section {
@@ -70,7 +70,7 @@ section.active {
 
 /* Hero Section */
 .hero {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,14 +80,14 @@ section.active {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     object-fit: cover;
     border: 3px solid var(--accent-color);
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     text-align: left;
     min-height: 3.6rem;
 }
@@ -100,12 +100,12 @@ section.active {
 .subtitle {
     font-size: 1.5rem;
     color: var(--secondary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .social-links a {
@@ -142,18 +142,18 @@ section.active {
 
 /* About Section */
 .about {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .about h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about p {
     font-size: 1.1rem;
     color: var(--secondary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .education {
@@ -185,12 +185,19 @@ section.active {
 
 /* Projects Section */
 .projects {
-    margin-top: 4rem;
+    margin-top: 3rem;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .projects h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin: 0;
     text-transform: lowercase;
 }
 
@@ -308,7 +315,7 @@ section.active {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .contact-button {
@@ -330,7 +337,7 @@ section.active {
 /* Footer */
 footer {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     color: var(--secondary-color);
 }
 
@@ -367,13 +374,6 @@ footer {
     }
 }
 
-.projects-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
 .view-more-link {
     color: var(--secondary-color);
     text-decoration: none;
@@ -406,7 +406,7 @@ footer {
 .tab-buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .tab-btn {
