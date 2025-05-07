@@ -206,6 +206,7 @@ section.active {
     grid-template-columns: repeat(auto-fit, 344px);
     gap: 1.5rem;
     justify-content: start;
+    margin-top: 1.5rem;
 }
 
 .project-card {
@@ -218,6 +219,7 @@ section.active {
     height: 417px;
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
 }
 
 .project-card:hover {
@@ -226,11 +228,31 @@ section.active {
     border-color: var(--accent-color);
 }
 
+.project-video {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.project-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-video video {
+    opacity: 1;
+}
+
 .project-content {
     padding: 1.2rem;
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 0.8rem;
 }
 
 .project-card h3 {

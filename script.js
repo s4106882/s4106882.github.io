@@ -121,4 +121,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start typing animation
     setTimeout(type, 1000);
+
+    // Video hover handling
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        const video = card.querySelector('video');
+        
+        card.addEventListener('mouseenter', () => {
+            video.play();
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+    });
 });
