@@ -1,8 +1,139 @@
-<html></html>
-    <head>
-        <title>My Website</title>
-    </head>
-    <body>
-        <h1>Welcome to my website</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Cybersecurity Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="vscode-container">
+        <!-- Activity Bar (Left Sidebar) -->
+        <div class="activity-bar">
+            <div class="activity-icon active" title="Home">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="activity-icon" title="About">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="activity-icon" title="Projects">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="activity-icon" title="Education">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="activity-icon" title="Skills">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div class="activity-icon" title="Contact">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li class="active">Home</li>
+                        <li>About</li>
+                        <li>Projects</li>
+                        <li>Education</li>
+                        <li>Skills</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div class="tab-bar">
+                    <div class="tab active">Home</div>
+                    <div class="tab">About</div>
+                    <div class="tab">Projects</div>
+                </div>
+
+                <div class="editor-content">
+                    <section id="home" class="active">
+                        <h1>Welcome to My Portfolio</h1>
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <span class="terminal-title">Terminal</span>
+                            </div>
+                            <div class="terminal-content">
+                                <p class="typing-text">$ Hello, I'm [Your Name]</p>
+                                <p class="typing-text">$ Cybersecurity Student at RMIT</p>
+                                <p class="typing-text">$ Passionate about Security & Technology</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="about">
+                        <h2>About Me</h2>
+                        <p>I am a dedicated cybersecurity student at RMIT University, passionate about protecting digital assets and understanding security vulnerabilities. My journey in cybersecurity is driven by a curiosity about how systems work and how to make them more secure.</p>
+                    </section>
+
+                    <section id="projects">
+                        <h2>Projects</h2>
+                        <div class="project-grid">
+                            <div class="project-card">
+                                <h3>Project 1</h3>
+                                <p>Description of your first project</p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Security</span>
+                                </div>
+                            </div>
+                            <!-- Add more project cards as needed -->
+                        </div>
+                    </section>
+
+                    <section id="education">
+                        <h2>Education</h2>
+                        <div class="education-item">
+                            <h3>RMIT University</h3>
+                            <p>Bachelor of Cybersecurity</p>
+                            <p>Current Student</p>
+                        </div>
+                    </section>
+
+                    <section id="skills">
+                        <h2>Technical Skills</h2>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h3>Security Tools</h3>
+                                <ul>
+                                    <li>Wireshark</li>
+                                    <li>Nmap</li>
+                                    <li>Metasploit</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>Bash</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="contact">
+                        <h2>Contact</h2>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+                            <p><i class="fab fa-github"></i> github.com/yourusername</p>
+                            <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourusername</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

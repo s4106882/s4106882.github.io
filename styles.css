@@ -1,0 +1,256 @@
+:root {
+    --vscode-bg: #1e1e1e;
+    --vscode-sidebar-bg: #252526;
+    --vscode-active-bg: #37373d;
+    --vscode-text: #cccccc;
+    --vscode-blue: #007acc;
+    --vscode-green: #6a9955;
+    --vscode-red: #f14c4c;
+    --vscode-yellow: #dcdcaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--vscode-bg);
+    color: var(--vscode-text);
+    line-height: 1.6;
+}
+
+.vscode-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Activity Bar Styles */
+.activity-bar {
+    width: 48px;
+    background-color: var(--vscode-sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.activity-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--vscode-text);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.activity-icon:hover {
+    background-color: var(--vscode-active-bg);
+}
+
+.activity-icon.active {
+    color: var(--vscode-blue);
+    border-left: 2px solid var(--vscode-blue);
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--vscode-sidebar-bg);
+    padding: 20px;
+}
+
+.sidebar-section h3 {
+    color: var(--vscode-blue);
+    margin-bottom: 10px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section li {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.sidebar-section li:hover {
+    background-color: var(--vscode-active-bg);
+}
+
+.sidebar-section li.active {
+    color: var(--vscode-blue);
+}
+
+/* Content Area Styles */
+.content {
+    flex: 1;
+    background-color: var(--vscode-bg);
+}
+
+.tab-bar {
+    display: flex;
+    background-color: var(--vscode-sidebar-bg);
+    padding: 0 10px;
+    border-bottom: 1px solid #333;
+}
+
+.tab {
+    padding: 8px 20px;
+    cursor: pointer;
+    border-right: 1px solid #333;
+}
+
+.tab.active {
+    background-color: var(--vscode-bg);
+    color: var(--vscode-blue);
+}
+
+.editor-content {
+    padding: 20px;
+}
+
+/* Terminal Styles */
+.terminal {
+    background-color: #000;
+    border-radius: 6px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #333;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-title {
+    color: var(--vscode-text);
+    font-size: 0.9em;
+}
+
+.terminal-content {
+    padding: 15px;
+    font-family: 'Consolas', monospace;
+}
+
+.typing-text {
+    margin: 5px 0;
+    color: var(--vscode-green);
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: var(--vscode-sidebar-bg);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.tech-stack {
+    margin-top: 10px;
+}
+
+.tech-tag {
+    background-color: var(--vscode-blue);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-category {
+    background-color: var(--vscode-sidebar-bg);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.skill-category h3 {
+    color: var(--vscode-blue);
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    margin: 5px 0;
+}
+
+/* Contact Section */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--vscode-blue);
+}
+
+/* Section Styles */
+section {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vscode-container {
+        flex-direction: column;
+    }
+    
+    .activity-bar {
+        width: 100%;
+        height: 48px;
+        flex-direction: row;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+} 
