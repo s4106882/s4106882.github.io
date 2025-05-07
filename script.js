@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Typing animation
-    const text = "hi rudy here :wave:";
-    const finalText = "hi rudy here 👋";
+    const text = "hey i'm rudy :wave:";
+    const finalText = "hey i'm rudy 👋";
     const typingText = document.querySelector('.typing-text');
     let currentText = "";
     let isDeleting = false;
